@@ -1,0 +1,67 @@
+/*   <fieldset className="player-card">
+                <h1 className="player-title">{`PLAYER ${this.state.playerNum}`}</h1>
+                <p className="total-score">{this.state.totalScore}</p>
+                <div className="current-score">
+                    <p className="current-score-title">CURRENT</p>
+                    <p className="current-score-score">{this.state.currentScore}</p>
+                </div>
+            </fieldset> */
+
+* {
+    box-sizing: border-box;
+}
+
+.player-card {
+    width: 20vw;
+    height: 80vh;
+    border: 3px solid rgb(0, 131, 109);
+    background-color: whitesmoke;
+    font-size: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    box-shadow: 1px 1px 5px black;
+}
+
+.player-title {
+    margin-top: 1.5rem;
+    font-family: 'Pangolin', cursive;
+}
+
+.total-score {
+    font-size: 60px;
+    font-family: 'Pangolin', cursive;
+}
+
+.current-score {
+    position: relative;
+    transform: translateY(5rem);
+    border: 1px solid black;
+    width: fit-content;
+    padding: 0.3rem;
+    align-self: center;
+    bottom: -7rem;
+    font-size: 16px;
+    background-image: radial-gradient(rgb(255, 80, 80) 95%, black 5%);
+}
+
+.current-player-mark {
+    position: absolute;
+    font-size: 20px;
+    color: whitesmoke;
+    padding: 0.5rem;
+    background-color: rgb(75, 255, 59);
+    font-weight: 400;
+    width: fit-content;
+    align-self: center;
+    bottom: 20rem;
+    animation: flicker 1.1s infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes flicker {
+    from {background-color: rgb(16, 196, 0)}
+    to {background-color:whitesmoke}
+}
